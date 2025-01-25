@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Landing Page </title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #121212;
+            color: white;
+        }
+
+        
+        nav {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #FFBF00;
+            padding: 10px 20px;
+            color: black;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: 700;
+        }
+
+        
+        .intro {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 20px;
+            background-color: #1E1E1E;
+        }
+
+        .intro .content {
+            max-width: 500px;
+        }
+
+        .intro h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #FFBF00;
+        }
+
+        .intro p {
+            margin-bottom: 20px;
+            color: #CFCFCF;
+        }
+
+        .intro button {
+            padding: 10px 20px;
+            background: #FFBF00;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .intro button:hover {
+            background: #FFD633;
+        }
+
+        .intro .image {
+            max-width: 300px;
+        }
+
+        .intro .image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+       
+        .contact {
+            padding: 50px 20px;
+            background: #121212;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #FFBF00;
+        }
+
+        .contact form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .contact input, .contact textarea {
+            padding: 10px;
+            border: 1px solid #FFBF00;
+            border-radius: 5px;
+            font-size: 1rem;
+            background: #1E1E1E;
+            color: white;
+        }
+
+        .contact input:focus, .contact textarea:focus {
+            outline: none;
+            border-color: #FFD633;
+        }
+
+        .contact button {
+            grid-column: span 2;
+            padding: 10px 20px;
+            background: #FFBF00;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .contact button:hover {
+            background: #FFD633;
+        }
+
+        
+        .table-section {
+            padding: 50px 20px;
+            background: #1E1E1E;
+        }
+
+        .table-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #FFBF00;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #FFBF00;
+            text-align: left;
+            color: #CFCFCF;
+        }
+
+        th {
+            background: #FFBF00;
+            color: black;
+        }
+
+        tfoot {
+            background: #FFBF00;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+   
+    <nav>
+        <div class="logo">Startup</div>
+        <ul>
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#login">Login</a></li>
+        </ul>
+    </nav>
+
+ 
+    <section id="intro" class="intro">
+        <div class="content">
+            <h1>Startup Landing page</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button>Login</button>
+        </div>
+        <div class="image">
+            <img src="https://media.gettyimages.com/id/2188276479/photo/new-york-times-holds-annual-dealbook-summit.jpg?s=1024x1024&w=gi&k=20&c=ag5VbQAEG0L0b1clExu_SDytxeCNrwV9RLTs9qzrFw4=" alt="Jeff Bezos">
+        </div>
+    </section>
+
+    
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Mobile Number">
+            <input type="text" placeholder="City">
+            <button type="submit">Submit Form</button>
+        </form>
+    </section>
+
+   
+    <section id="table" class="table-section">
+        <h2>Table Section</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>SNO.</th>
+                    <th>Startup Name</th>
+                    <th>Startup Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>WowIndia</td>
+                    <td>A startup with WOW ideas.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Lorem Ipsum</td>
+                    <td>Lorem Ipsum Text</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Lorem Ipsum</td>
+                    <td>Lorem Ipsum Text</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Lorem Ipsum</td>
+                    <td>Lorem Ipsum Text</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Lorem Ipsum</td>
+                    <td>Lorem Ipsum Text</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>00</td>
+                    <td>Final Footer</td>
+                    <td>Lorem Ipsum Text</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+</body>
+</html>
+
