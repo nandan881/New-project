@@ -1,225 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Design Project</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    /* Global Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Landing Page </title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #121212;
+            color: white;
+        }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      line-height: 1.5;
-      color: #333;
-    }
+        
+        nav {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #FFBF00;
+            padding: 10px 20px;
+            color: black;
+        }
 
-    :root {
-      --primary-color: #3498db;
-      --hover-color: #5dade2;
-      --font-color: #333;
-      --background-color: #f4f4f4;
-    }
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
 
-    /* Header */
-    header {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
+        nav ul li {
+            margin-left: 20px;
+        }
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: 700;
+        }
 
-    nav ul li a:hover {
-      color: var(--hover-color);
-    }
+        
+        .intro {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 20px;
+            background-color: #1E1E1E;
+        }
 
-    /* Hero Section */
-    .hero {
-      text-align: center;
-      padding: 3rem 1rem;
-      background-color: var(--background-color);
-    }
+        .intro .content {
+            max-width: 500px;
+        }
 
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
+        .intro h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #FFBF00;
+        }
 
-    .hero p {
-      font-size: 1rem;
-      margin-bottom: 2rem;
-    }
+        .intro p {
+            margin-bottom: 20px;
+            color: #CFCFCF;
+        }
 
-    .cta-button {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: transform 0.3s ease, background-color 0.3s ease;
-    }
+        .intro button {
+            padding: 10px 20px;
+            background: #FFBF00;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
 
-    .cta-button:hover {
-      transform: scale(1.1);
-      background-color: var(--hover-color);
-    }
+        .intro button:hover {
+            background: #FFD633;
+        }
 
-    /* Content Section */
-    .content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      padding: 2rem;
-    }
+        .intro .image {
+            max-width: 300px;
+        }
 
-    .card {
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 1.5rem;
-      text-align: center;
-      width: 300px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+        .intro .image img {
+            width: 100%;
+            border-radius: 10px;
+        }
 
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    }
+       
+        .contact {
+            padding: 50px 20px;
+            background: #121212;
+        }
 
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #FFBF00;
+        }
 
-    .card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
+        .contact form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
 
-    .card p {
-      font-size: 0.9rem;
-      color: #666;
-    }
+        .contact input, .contact textarea {
+            padding: 10px;
+            border: 1px solid #FFBF00;
+            border-radius: 5px;
+            font-size: 1rem;
+            background: #1E1E1E;
+            color: white;
+        }
 
-    /* Footer */
-    footer {
-      background-color: var(--primary-color);
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
+        .contact input:focus, .contact textarea:focus {
+            outline: none;
+            border-color: #FFD633;
+        }
 
-    footer p {
-      font-size: 0.9rem;
-    }
+        .contact button {
+            grid-column: span 2;
+            padding: 10px 20px;
+            background: #FFBF00;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
 
-    /* Media Queries */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
+        .contact button:hover {
+            background: #FFD633;
+        }
 
-      .hero p {
-        font-size: 0.9rem;
-      }
+        
+        .table-section {
+            padding: 50px 20px;
+            background: #1E1E1E;
+        }
 
-      .cta-button {
-        width: 100%;
-      }
+        .table-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #FFBF00;
+        }
 
-      .content {
-        flex-direction: column;
-        align-items: center;
-      }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
 
-      .card {
-        width: 90%;
-      }
-    }
+        th, td {
+            padding: 10px;
+            border: 1px solid #FFBF00;
+            text-align: left;
+            color: #CFCFCF;
+        }
 
-    @media (max-width: 480px) {
-      .hero h1 {
-        font-size: 1.5rem;
-      }
+        th {
+            background: #FFBF00;
+            color: black;
+        }
 
-      .hero p {
-        font-size: 0.8rem;
-      }
-
-      .cta-button {
-        font-size: 0.9rem;
-      }
-    }
-  </style>
+        tfoot {
+            background: #FFBF00;
+            color: black;
+        }
+    </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
+   
     <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+        <div class="logo">Startup</div>
+        <ul>
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#login">Login</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to the Website</h1>
-    <p>This is a beautiful and responsive design. Explore now!</p>
-    <button class="cta-button">Get Started</button>
-  </section>
+ 
+    <section id="intro" class="intro">
+        <div class="content">
+            <h1>Startup Landing Page</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button>Login</button>
+        </div>
+        <div class="image">
+            <img src="https://media.gettyimages.com/id/2188276479/photo/new-york-times-holds-annual-dealbook-summit.jpg?s=1024x1024&w=gi&k=20&c=ag5VbQAEG0L0b1clExu_SDytxeCNrwV9RLTs9qzrFw4=" alt="Jeff Bezos">
+        </div>
+    </section>
 
-  <!-- Content Section -->
-  <section class="content">
-    <div class="card">
-      <img src="https://via.placeholder.com/300" alt="Placeholder Image">
-      <h3>Card Title 1</h3>
-      <p>This is a sample description for the card content.</p>
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300" alt="Placeholder Image">
-      <h3>Card Title 2</h3>
-      <p>This is a sample description for the card content.</p>
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300" alt="Placeholder Image">
-      <h3>Card Title 3</h3>
-      <p>This is a sample description for the card content.</p>
-    </div>
-  </section>
+    
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Mobile Number">
+            <input type="text" placeholder="City">
+            <button type="submit">Submit Form</button>
+        </form>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Responsive Design Project. All Rights Reserved.</p>
-  </footer>
+   
+    <section id="table" class="table-section">
+        <h2>Table Section</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>SNO.</th>
+                    <th>Startup Name</th>
+                    <th>Startup Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>WowIndia</td>
+                    <td>A startup with WOW ideas.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Lorem Ipsum</td>
+                    <td>Lorem Ipsum Text</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Lorem Ipsum</td>
+                    <td>Lorem Ipsum Text</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Lorem Ipsum</td>
+                    <td>Lorem Ipsum Text</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Lorem Ipsum</td>
+                    <td>Lorem Ipsum Text</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>00</td>
+                    <td>Final Footer</td>
+                    <td>Lorem Ipsum Text</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
 </body>
 </html>
